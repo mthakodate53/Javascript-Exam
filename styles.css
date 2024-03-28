@@ -10,6 +10,11 @@ body {
   font-family: Montserrat;
 }
 
+h1 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -22,7 +27,7 @@ a {
 }
 
 #logo {
-  margin-left: 150px;
+  margin-left: 12%;
 }
 
 .header {
@@ -39,7 +44,7 @@ a {
 .nav-menu {
   display: flex;
   gap: 42px;
-  margin-right: 150px;
+  margin-right: 12%;
 }
 
 .nav-item {
@@ -79,6 +84,183 @@ a {
   height: 3px;
   background-color: #ffffff;
   transition: all 0.3s ease-in-out;
+}
+
+.eighty-percent-wrapper {
+  width: 80%;
+  margin-left: 12%;
+}
+
+.hero {
+  height: 640px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/background.png");
+  background-size: cover;
+}
+
+.hero-left {
+  width: 55%;
+}
+
+.hero-left h1 {
+  color: #ffffff;
+  margin: 22px 0;
+}
+
+.hero-left p {
+  color: #ffffff;
+  opacity: 80%;
+  font-size: 16px;
+  margin-bottom: 36px;
+}
+
+.hero-logo {
+  padding-top: 65px;
+}
+
+.hero-logo img:first-child {
+  height: 110px;
+}
+
+.hero-left button {
+  border: 3px solid #ffffff;
+  width: 135px;
+  height: 42px;
+  background: none;
+  color: #ffffff;
+}
+
+.hero-left button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.hero-right {
+  width: 45%;
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero .eighty-percent-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trial-form {
+  border-radius: 10px;
+  height: 425px;
+  width: 72%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trial-form input[type=text],
+.trial-form p {
+  width: 260px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.trial-form p {
+  font-weight: 600;
+}
+
+.trial-form p:first-of-type {
+  margin-top: 25px;
+}
+
+.trial-form input:nth-of-type(4) {
+  margin-left: 50px;
+}
+
+.trial-form input[id=submit] {
+  text-align: center;
+  width: 100%;
+  border: none;
+  height: 60px;
+  margin-top: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 18px;
+  font-family: Montserrat;
+  font-weight: 500;
+  background-color: #41d395;
+}
+
+.trial-form input[id=submit]:hover {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.trial-form input[type=text] {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #d8d8d8;
+  height: 28px;
+  margin-bottom: 20px;
+  color: #d8d8d8;
+}
+
+.trial-form input[type=text]:not(:-moz-placeholder-shown) {
+  border-color: #e27866;
+  color: #1c1c1c;
+}
+
+.trial-form input[type=text]:focus,
+.trial-form input[type=text]:not(:placeholder-shown) {
+  border-color: #e27866;
+  color: #1c1c1c;
+}
+
+.trial-form input[type=radio] {
+  font-size: 9px;
+  accent-color: #41d395;
+}
+
+.trial-form label {
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.form-title {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 57px;
+  background-color: #f5f5f5;
+  width: 100%;
+  text-align: center;
+}
+
+.form-title h2 {
+  font-size: 20px;
+  margin: 17px 0;
+}
+
+.social {
+  height: 105px;
+}
+
+.social-left {
+  width: 40%;
+}
+
+.social-left p {
+  margin-top: 0;
+}
+
+.social-left h4 {
+  margin-bottom: 5px;
+}
+
+.tabs {
+  height: 595px;
+  background-size: cover;
+  background-image: url("assets/tabs-background.png");
 }
 
 @media screen and (max-width: 1024px) {
