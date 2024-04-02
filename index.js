@@ -57,7 +57,7 @@ const paragraph1 = document.getElementById("tabs-p1");
 const paragraph2 = document.getElementById("tabs-p2");
 
 const headlines = [
-  "Meaningless text for even more meaningless purpose",
+  "Pecorino the big cheese taleggio roquefort",
   "Cauliflower cheese taleggio fromage frais.",
   "Red leicester taleggio roquefort. ",
 ];

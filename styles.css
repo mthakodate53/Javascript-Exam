@@ -290,7 +290,7 @@ a {
 }
 
 .tabs {
-  height: 595px;
+  height: 596px;
   background-size: cover;
   background-image: url("assets/tabs-background.png");
 }
@@ -362,7 +362,7 @@ a {
 }
 
 #tabs-text-column p {
-  font-weight: 300;
+  font-weight: 200;
   font-size: 14px;
 }
 
@@ -481,7 +481,8 @@ a {
 }
 
 .about-right p {
-  font-weight: 300;
+  font-weight: 200;
+  font-size: 14px;
 }
 
 .about-right img:first-of-type {
@@ -495,6 +496,52 @@ a {
 .text-with-symbol {
   display: flex;
   gap: 50px;
+}
+
+.reasons .eighty-percent-wrapper {
+  text-align: center;
+  height: 596px;
+}
+
+.reasons h2 {
+  font-size: 36px;
+  margin-top: 100px;
+}
+
+.reasons .eighty-percent-wrapper > p {
+  font-size: 14px;
+  color: #86878b;
+}
+
+#three-reason-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 95px;
+}
+
+.reason {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 65px;
+  text-align: center;
+}
+
+.reason img {
+  height: 45px;
+}
+
+.reason h4 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #86878b;
+}
+
+.reason p {
+  font-size: 14px;
+  color: #86878b;
 }
 
 @media screen and (max-width: 1024px) {
@@ -612,5 +659,25 @@ a {
   }
   .about-right h3 {
     display: none;
+  }
+  .reason p {
+    display: none;
+  }
+  #three-reason-container {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  .reason {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .reasons .eighty-percent-wrapper {
+    text-align: center;
+    height: 270px;
   }
 }/*# sourceMappingURL=styles.css.map */
