@@ -34,7 +34,7 @@ a {
 }
 
 #logo {
-  margin-left: 12%;
+  margin-left: 11%;
 }
 
 .header {
@@ -43,6 +43,7 @@ a {
 }
 
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,7 +52,7 @@ a {
 .nav-menu {
   display: flex;
   gap: 42px;
-  margin-right: 12%;
+  margin-right: 11%;
 }
 
 .nav-item {
@@ -97,7 +98,7 @@ a {
 }
 
 .eighty-percent-wrapper {
-  width: 80%;
+  width: 76%;
   margin-left: 12%;
 }
 
@@ -148,11 +149,11 @@ a {
 }
 
 .hero-right {
-  width: 45%;
+  width: 50%;
   margin-top: 75px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .hero .eighty-percent-wrapper {
@@ -172,13 +173,18 @@ a {
 
 .trial-form input[type="text"],
 .trial-form p {
-  width: 260px;
-  margin-left: 50px;
-  margin-right: 50px;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .trial-form p {
   font-weight: 600;
+  margin-top: 1;
+}
+
+#trial-form {
+  width: 100%;
 }
 
 .trial-form p:first-of-type {
@@ -186,7 +192,7 @@ a {
 }
 
 .trial-form input:nth-of-type(4) {
-  margin-left: 50px;
+  margin-left: 15%;
 }
 
 .trial-form input[id="submit"] {
@@ -246,28 +252,257 @@ a {
 .form-title h2 {
   font-size: 20px;
   margin: 17px 0;
+  font-weight: 500;
+}
+
+.form-title span {
+  color: $rose;
 }
 
 .social {
   height: 105px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.social .eighty-percent-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .social-left {
   width: 40%;
 }
 
-.social-left p {
-  margin-top: 0;
-}
-
 .social-left h4 {
   margin-bottom: 5px;
+  margin-top: 19px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.social-left p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #86878b;
+}
+
+.social-right {
+  padding-top: 10px;
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .tabs {
   height: 595px;
   background-size: cover;
   background-image: url("assets/tabs-background.png");
+}
+
+.additional {
+  display: none;
+}
+
+.tabs {
+  background: linear-gradient(
+      270deg,
+      rgba(102, 150, 226, 0.2),
+      rgba(226, 120, 102, 0.2)
+    ),
+    url("assets/tabs-background.png");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.tabs .eighty-percent-wrapper {
+  padding-top: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.tabs-left-column {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-grid {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-button {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 20px;
+  border-radius: 0;
+  background: #a37169;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-button p {
+  text-align: center;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tab-button:hover {
+  background-color: $rose;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+#tabs-text-column {
+  margin-left: 5%;
+  color: $white;
+}
+
+#tabs-text-column h2 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-top: 0;
+}
+#tabs-text-column p {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.image-card {
+  text-align: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 35px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+#line-one .image-card {
+  height: 168px;
+  position: relative;
+}
+
+#line-two .image-card {
+  height: 177px;
+  object-fit: cover;
+}
+
+#line-one img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 0;
+  object-fit: cover;
+}
+
+#line-two img {
+  height: 100%;
+  display: block;
+  padding: 0;
+  object-fit: cover;
+}
+
+#line-two .image-card {
+  height: 177px;
+}
+
+.transparent {
+  opacity: 0.5;
+  transition: 0.5s ease;
+}
+
+.image-card img:after:hover {
+  opacity: 1;
+}
+
+#line-one {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+#line-two {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-grid {
+  padding-left: 5%;
+}
+
+.visible {
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+#tabs-mobile {
+  display: none;
+}
+
+.about .eighty-percent-wrapper {
+  display: flex;
+  height: 596px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about {
+  background-color: $black;
+}
+
+.about-left {
+  width: 50%;
+}
+
+.about-left img {
+  height: 170px;
+}
+.about-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.about-right h3 {
+  font-size: 30px;
+}
+
+.about-right p {
+  font-weight: 300;
+}
+
+.about-right img:first-of-type {
+  width: 200px;
+}
+
+.block-div {
+  display: block;
+}
+
+.text-with-symbol {
+  display: flex;
+  gap: 50px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -333,5 +568,83 @@ a {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .hero-description {
+    display: none;
+  }
+
+  .hero-right {
+    display: none;
+  }
+
+  .hero-left {
+    width: 100%;
+  }
+
+  .social-left {
+    display: none;
+  }
+
+  .social-right {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .additional {
+    display: block;
+  }
+
+  #tabs-left-column {
+    display: none;
+  }
+
+  #tabs-text-column {
+    width: 100%;
+  }
+
+  #tabs-text-column h2 {
+    font-size: 24px;
+  }
+
+  .tabs .eighty-percent-wrapper {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .image-grid {
+    display: none;
+  }
+  #tabs-mobile {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 2dvh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-left {
+    display: none;
+  }
+
+  .about-right {
+    width: 100%;
+  }
+
+  .about-right > img {
+    display: none;
+  }
+
+  .about-right > p {
+    display: none;
+  }
+
+  .about-right h3 {
+    display: none;
   }
 }
