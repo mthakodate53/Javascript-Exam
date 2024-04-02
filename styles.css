@@ -665,6 +665,65 @@ a {
   height: 6px;
   background-color: #41d395;
 }
+.testimonials {
+  height: 596px;
+}
+
+.swiper {
+  width: 76%;
+  height: 492px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #e27866 !important;
+}
+
+.testimonials {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.testimonial {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 20px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-author img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.author-info h4 {
+  margin: 0;
+}
+
+.author-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #888;
+}
 
 @media screen and (max-width: 1024px) {
   #logo {
