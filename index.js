@@ -120,4 +120,30 @@ contactForm.addEventListener("submit", (event) => {
   localStorage.setItem("contactFormData", JSON.stringify(formData));
 });
 
-//Sticky navbar
+//Smooth scroll
+
+document.addEventListener("DOMContentLoaded", makeLinksSmooth);
+function makeLinksSmooth() {
+  const navLinks = document.querySelectorAll(".nav-menu a");
+  const headerLogo = document.getElementById("logo");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", smoothScroll);
+  });
+  headerLogo.addEventListener("click", scrollToTop);
+}
+
+function smoothScroll(e) {
+  e.preventDefault();
+  const targetId = this.getAttribute("href");
+  const targetElement = document.querySelector(targetId);
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
