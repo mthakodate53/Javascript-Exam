@@ -25,7 +25,7 @@
     <!-- container -->
     <div class="container">
       <header class="header">
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
           <a href="./index.html" id="logo"
             ><img src="./assets/cheshire-county-hygiene-services.svg"
           /></a>
@@ -235,8 +235,8 @@
       <div class="text-with-symbol"><img src="./assets/twitter-1.svg"/> <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A eveniet rerum ipsum quo. Facilis aliquam unde, vel vero quia repellat quasi blanditiis, consequatur iure quod obcaecati, recusandae optio soluta dolore.</p></div>
       </div>
       </div>
-    </section>
-    <section class="reasons">
+      </section>
+      <section class="reasons">
       <div class="eighty-percent-wrapper">
         <h2>WHY THIS IS AWESOME</h2>
         <img src="./assets/divider_orange_u7 copy 2.svg"/>
@@ -257,14 +257,13 @@
           <h4>Thoughtful Design</h4>
           <p>Lorem ipsum dolor cumque voluptates porro dolorem, quisquam asperiores suscipit.</p>
         </div> 
-      </div>
-    </section>    
-    <section class="pricing">
+      </section>    
+        <section class="pricing">
       <div class="eighty-percent-wrapper">
           <h2>PRICING OPTIONS</h2>
           <img src="./assets/divider_white_u72.png">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <div class="pricing-options">
+          <div class="pricing-options pricing-desktop">
             <div class="pricing-option">
               <div class="pricing-header">Basic</div>
               <div class="pricing-price">$<span class="max">0</span></div>
@@ -309,19 +308,61 @@
             </div>
           </div>
         </div>
-      </div>
+        <div class="pricing-options mobile-only">
+          <div class="pricing-option">
+            <div class="pricing-header">Basic</div>
+            <div class="pricing-price">$<span class="max">0</span></div>
+            <div class="pricing-description">Free for Life</div>
+            <div class="price-divider"></div>
+            <ul class="pricing-features">
+              <li>1 GB OF SPACE</li>
+              <li>10 GB OF BANDWIDTH</li>
+              <li>3 WEBSITES</li>
+              <li>BASIC CUSTOMIZATION</li>
+              <li>WORDPRESS INTEGRATION</li>
+              <li>EMAIL SUPPORT</li>
+            </ul>
           </div>
+          <div class="pricing-option popular">
+            <div class="pricing-header">Professional</div>
+            <div class="pricing-price">$<span class="max">19</span></div>
+            <div class="pricing-description">Monthly Payment</div>
+            <div class="popular-tag">OUR MOST POPULAR</div>
+            <ul class="pricing-features">
+              <li>5 GB OF SPACE</li>
+              <li>50 GB OF BANDWIDTH</li>
+              <li>12 WEBSITES</li>
+              <li>ADVANCED CUSTOMIZATION</li>
+              <li>WORDPRESS INTEGRATION</li>
+              <li>EMAIL SUPPORT</li>
+            </ul>
+          </div>
+          <div class="pricing-option">
+            <div class="pricing-header">Enterprise</div>
+            <div class="pricing-price">$<span class="max">70</span></div>
+            <div class="pricing-description">Monthly Payment</div>
+            <div class="price-divider"></div>
+            <ul class="pricing-features">
+              <li>UNLIMITED SPACE</li>
+              <li>UNLIMITED BANDWIDTH</li>
+              <li>100 WEBSITES</li>
+              <li>ADVANCED CUSTOMIZATION</li>
+              <li>WORDPRESS INTEGRATION</li>
+              <li>24/7 CUSTOMER SUPPORT</li>
+            </ul>
+          </div>
+        </div>
       </section>
       <section class="testimonials">
-        <h2>WHY THIS IS AWESOME</h2>
+        <h2>WHAT OUR CUSTOMERS ARE SAYING</h2>
         <img src="./assets/divider_orange_u7 copy 2.svg"/>
-<!-- Slider main container -->
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide">
-      <div class="testimonials">
+        <!-- Slider main container -->
+        <div class="swiper">
+         <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+         <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="testimonials">
         <div class="testimonial-container">
           <div class="testimonial">
             <div class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</div>
@@ -470,24 +511,93 @@
 </div>
 
       </section>
-      <section class="contact"></section>
-      <footer></footer>
+      <section class="contact">
+        <div class="eighty-percent-wrapper">
+          <h2>CONTACT US</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="contact-form">
+            <form id="contact-form" action="#">
+              <input
+                required
+                type="text"
+                id="first-name"
+                name="first-name"
+                placeholder="First name"
+              />
+              <input
+                required
+                type="text"
+                id="last-name"
+                name="last-name"
+                placeholder="Last name"
+              />
+              <input
+                required
+                type="text"
+                id="phone-number"
+                name="phone-number"
+                placeholder="Phone number"
+              />
+              <input
+                required
+                type="radio"
+                checked="checked"
+                id="personal"
+                name="contact"
+                value="personal"
+              />
+              <label for="monthly">PERSONAL</label>
+              <input
+                required
+                type="radio"
+                id="company"
+                name="contact"
+                value="company"
+              />
+              <label for="yearly">COMPANY</label>
+              <input id="submit" type="submit" value="SEND" />
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer>
+          <div class="eighty-percent-wrapper">
+            <div class="footer-left">
+              <a href="#"
+                ><img src="./assets/facebook-logo.svg" alt="Facebook logo"
+              /></a>
+              <a href="#"
+                ><img src="./assets/instagram-logo.svg" alt="Instagram logo"
+              /></a>
+              <a href="#"
+                ><img src="./assets/twitter.svg" alt="Twitter logo"
+              /></a>
+              <a href="#"
+                ><img src="./assets/pinterest.svg" alt="Pinterest logo"
+              /></a>
+              <a href="#"
+                ><img src="./assets/instagram-logo.svg" alt="Instagram logo"
+              /></a>
+            </div>
+            <div class="footer-right">
+              <p>
+                © 2024 Cheshire County
+              </p>
+            </div>
+          </div>
+      </footer>
     </div>
-    <!-- container -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
 <script>
   const swiper = new Swiper(".swiper", {
-  // Optional parameters
   direction: "horizontal",
   loop: true,
-
-  // If we need pagination
   pagination: {
     el: ".swiper-pagination",
   },
-
 });
 </script>
+
   </body>
 </html>

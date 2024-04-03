@@ -7,7 +7,6 @@ function mobileMenu() {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 }
-
 const navLink = document.querySelectorAll(".nav-link");
 navLink.forEach((link) => link.addEventListener("click", closeMenu));
 function closeMenu() {
@@ -15,7 +14,7 @@ function closeMenu() {
   navMenu.classList.remove("active");
 }
 
-// Form data verification and saving to localstorage
+// Trial form data verification and saving to localstorage
 
 const form = document.getElementById("trial-form");
 form.addEventListener("submit", (event) => {
@@ -26,16 +25,15 @@ form.addEventListener("submit", (event) => {
   const subscription = document.querySelector(
     'input[name="subscription"]:checked'
   );
-  if (
-    !/\(?\+[0-9]{1,3}\)? ?-?[0-9]{1,3} ?-?[0-9]{3,5} ?-?[0-9]{4}( ?-?[0-9]{3})? ?(\w{1,10}\s?\d{1,6})?/.test(
-      phoneNumber
-    )
-  ) {
-    alert("Phone number must contain only numeric characters.");
+  if (!/^\+?\d+$/.test(phoneNumber)) {
+    alert("Phone number must contain numbers only.");
     return;
   }
-  if (!/^[a-zA-Z]+$/.test(firstName) || !/^[a-zA-Z]+$/.test(lastName)) {
-    alert("First and last names must contain only alphabetic characters.");
+  if (
+    !/^[a-zA-ZąčęėįšųūĄČĘĖĮŠŲŪ]+$/.test(firstName) ||
+    !/^[a-zA-ZąčęėįšųūĄČĘĖĮŠŲŪ]+$/.test(lastName)
+  ) {
+    alert("First and last names must contain letters only.");
     return;
   }
   const formData = {
@@ -45,6 +43,7 @@ form.addEventListener("submit", (event) => {
     subscription: subscription ? subscription.value : "",
   };
   alert("Form submitted successfully!");
+  localStorage.setItem("trialFormData", JSON.stringify(formData));
 });
 
 //Transition for tab section images
@@ -55,7 +54,6 @@ const columnSelectors = document.querySelectorAll(
 const headline = document.querySelector("#tabs-text-column > h2");
 const paragraph1 = document.getElementById("tabs-p1");
 const paragraph2 = document.getElementById("tabs-p2");
-
 const headlines = [
   "Pecorino the big cheese taleggio roquefort",
   "Cauliflower cheese taleggio fromage frais.",
@@ -66,7 +64,6 @@ const firstParagraphTexts = [
   "Cauliflower cheese taleggio fromage frais. Placeholder text to match the length of the first paragraph. This sentence is added to make the text the same length as the first one. More filler words go here.",
   "Red leicester taleggio roquefort. Placeholder text to match the length of the first paragraph. This sentence is added to make the text the same length as the first one. More filler words go here.",
 ];
-
 const secondParagraphTexts = [
   "Cauliflower cheese taleggio fromage frais. Pecorino the big cheese taleggio roquefort cream cheese pepper jack ricotta melted cheese. Boursin stinking bishop monterey jack fromage frais cheese and wine gouda everyone loves swiss. Lancashire macaroni cheese cream cheese.",
   "Cauliflower cheese taleggio fromage frais. Placeholder text to match the length of the first paragraph. This sentence is added to make the text the same length as the first one. More filler words go here.",
@@ -79,7 +76,6 @@ columnSelectors.forEach((image, index) => {
     paragraph2.textContent = secondParagraphTexts[index];
   });
 });
-
 const images = document.querySelectorAll(".image-card");
 const backgrounds = document.querySelectorAll(".image-card img");
 const overlays = document.querySelectorAll(".overlay");
@@ -93,3 +89,35 @@ images.forEach((image, index) => {
     overlays[index].classList.remove("visible");
   });
 });
+
+// Contact form data verification and saving to localstorage
+
+const contactForm = document.getElementById("contact-form");
+contactForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const firstName = contactForm.elements["first-name"].value.trim();
+  const lastName = contactForm.elements["last-name"].value.trim();
+  const phoneNumber = contactForm.elements["phone-number"].value.trim();
+  const contact = document.querySelector('input[name="contact"]:checked');
+  if (!/^\+?\d+$/.test(phoneNumber)) {
+    alert("Phone number must contain numbers only.");
+    return;
+  }
+  if (
+    !/^[a-zA-ZąčęėįšųūĄČĘĖĮŠŲŪ]+$/.test(firstName) ||
+    !/^[a-zA-ZąčęėįšųūĄČĘĖĮŠŲŪ]+$/.test(lastName)
+  ) {
+    alert("First and last names must contain letters only.");
+    return;
+  }
+  const formData = {
+    "first-name": firstName,
+    "last-name": lastName,
+    "phone-number": phoneNumber,
+    contact: contact ? contact.value : "",
+  };
+  alert("Form submitted successfully!");
+  localStorage.setItem("contactFormData", JSON.stringify(formData));
+});
+
+//Sticky navbar
