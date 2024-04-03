@@ -910,17 +910,6 @@ footer .eighty-percent-wrapper {
   display: none;
 }
 
-.rectangle {
-  position: absolute;
-  left: 50px;
-  bottom: 80px;
-  transform: rotate(45deg);
-  height: 20px;
-  width: 20px;
-  background-color: #6696e2;
-  z-index: -100;
-}
-
 @media screen and (max-width: 1024px) {
   .mobile-only {
     display: flex;
