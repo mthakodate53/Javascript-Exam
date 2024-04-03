@@ -898,4 +898,8 @@ a {
     width: 80%;
     flex-shrink: 0;
   }
+
+  .testimonial:not(:first-child) {
+    display: none;
+  }
 } /*# sourceMappingURL=styles.css.map */
