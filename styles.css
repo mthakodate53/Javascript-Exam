@@ -693,6 +693,11 @@ a {
   background-color: #e27866 !important;
 }
 
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+}
+
 .testimonials {
   text-align: center;
   padding: 50px 0;
@@ -1108,5 +1113,9 @@ footer .eighty-percent-wrapper {
 
   .swiper {
     height: 440px;
+  }
+
+  .testimonial-container {
+    justify-content: center;
   }
 }
